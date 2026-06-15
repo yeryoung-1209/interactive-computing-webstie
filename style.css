@@ -20,7 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 80px;
+  margin-bottom: 56px;
 }
 
 .site-title {
@@ -38,7 +38,7 @@ body {
 
 /* Hero */
 .hero {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 .hero-link {
@@ -56,6 +56,7 @@ body {
 .hero-thumb {
   width: 100%;
   aspect-ratio: 1688 / 904;
+  max-height: 62vh;
 }
 
 .hero-thumb iframe {
