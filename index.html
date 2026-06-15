@@ -94,7 +94,19 @@
         frame.style.transformOrigin = '0 0';
       });
     }
+    function hideNavInIframes() {
+      document.querySelectorAll('.thumb iframe').forEach(function(frame) {
+        frame.addEventListener('load', function() {
+          try {
+            var style = frame.contentDocument.createElement('style');
+            style.textContent = '.nav-header, .nav-prev, .nav-next { display: none !important; }';
+            frame.contentDocument.head.appendChild(style);
+          } catch(e) {}
+        });
+      });
+    }
     document.addEventListener('DOMContentLoaded', scaleIframes);
+    document.addEventListener('DOMContentLoaded', hideNavInIframes);
     window.addEventListener('resize', scaleIframes);
   </script>
 </body>
