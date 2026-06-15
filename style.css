@@ -1,0 +1,102 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+.page {
+  padding: 70px clamp(20px, 6vw, 116px) 120px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/* Hero */
+.hero {
+  margin-bottom: 80px;
+}
+
+.hero-link {
+  display: block;
+  text-decoration: none;
+}
+
+.thumb {
+  position: relative;
+  overflow: hidden;
+  border-radius: 40px;
+  background: #000;
+}
+
+.hero-thumb {
+  width: 100%;
+  aspect-ratio: 1688 / 904;
+}
+
+.hero-thumb iframe {
+  position: absolute;
+  border: none;
+  pointer-events: none;
+}
+
+.hero-link:hover .hero-thumb {
+  opacity: 0.9;
+}
+
+/* Section title */
+.section-title {
+  font-size: clamp(24px, 2.5vw, 40px);
+  font-weight: 600;
+  margin: 0 0 32px;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(12px, 1.5vw, 20px);
+}
+
+.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card .thumb {
+  width: 100%;
+  aspect-ratio: 808 / 558;
+  transition: opacity 0.2s ease;
+}
+
+.card .thumb iframe {
+  position: absolute;
+  border: none;
+  pointer-events: none;
+}
+
+.card:hover .thumb {
+  opacity: 0.85;
+}
+
+.wk-label {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .thumb {
+    border-radius: 20px;
+  }
+}

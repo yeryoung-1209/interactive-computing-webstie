@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Computing 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <div class="hero">
+      <a href="wk13/" class="hero-link">
+        <div class="thumb hero-thumb">
+          <iframe src="wk13/" scrolling="no" tabindex="-1" allow="camera 'none'"></iframe>
+        </div>
+      </a>
+    </div>
+
+    <h2 class="section-title">All Projects</h2>
+
+    <div class="grid">
+      <a href="wk01/" class="card">
+        <div class="thumb"><iframe src="wk01/" scrolling="no" tabindex="-1" allow="camera 'none'"></iframe></div>
+        <span class="wk-label">Week 01</span>
+      </a>
+      <a href="wk02/" class="card">
+        <div class="thumb"><iframe src="wk02/" scrolling="no" tabindex="-1" allow="camera 'none'"></iframe></div>
+        <span class="wk-label">Week 02</span>
+      </a>
+      <a href="wk03/" class="card">
+        <div class="thumb"><iframe src="wk03/" scrolling="no" tabindex="-1" allow="camera 'none'"></iframe></div>
+        <span class="wk-label">Week 03</span>
+      </a>
+      <a href="wk04/" class="card">
+        <div class="thumb"><iframe src="wk04/" scrolling="no" tabindex="-1" allow="camera 'none'"></iframe></div>
+        <span class="wk-label">Week 04</span>
+      </a>
+      <a href="wk05/" class="card">
+        <div class="thumb"><iframe src="wk05/" scrolling="no" tabindex="-1" allow="camera 'none'"></iframe></div>
+        <span class="wk-label">Week 05</span>
+      </a>
+      <a href="wk06/" class="card">
+        <div class="thumb"><iframe src="wk06/" scrolling="no" tabindex="-1" allow="camera 'none'"></iframe></div>
+        <span class="wk-label">Week 06</span>
+      </a>
+      <a href="wk07/" class="card">
+        <div class="thumb"><iframe src="wk07/" scrolling="no" tabindex="-1" allow="camera 'none'"></iframe></div>
+        <span class="wk-label">Week 07</span>
+      </a>
+      <a href="wk08/" class="card">
+        <div class="thumb"><iframe src="wk08/" scrolling="no" tabindex="-1" allow="camera 'none'"></iframe></div>
+        <span class="wk-label">Week 08</span>
+      </a>
+      <a href="wk09/" class="card">
+        <div class="thumb"><iframe src="wk09/" scrolling="no" tabindex="-1" allow="camera 'none'"></iframe></div>
+        <span class="wk-label">Week 09</span>
+      </a>
+      <a href="wk10/" class="card">
+        <div class="thumb"><iframe src="wk10/" scrolling="no" tabindex="-1" allow="camera 'none'"></iframe></div>
+        <span class="wk-label">Week 10</span>
+      </a>
+      <a href="wk11/" class="card">
+        <div class="thumb"><iframe src="wk11/" scrolling="no" tabindex="-1" allow="camera 'none'"></iframe></div>
+        <span class="wk-label">Week 11</span>
+      </a>
+      <a href="wk12/" class="card">
+        <div class="thumb"><iframe src="wk12/" scrolling="no" tabindex="-1" allow="camera 'none'"></iframe></div>
+        <span class="wk-label">Week 12</span>
+      </a>
+      <a href="wk13/" class="card">
+        <div class="thumb"><iframe src="wk13/" scrolling="no" tabindex="-1" allow="camera 'none'"></iframe></div>
+        <span class="wk-label">Week 13</span>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function scaleIframes() {
+      document.querySelectorAll('.thumb').forEach(function(el) {
+        var frame = el.querySelector('iframe');
+        if (!frame) return;
+        var w = el.offsetWidth;
+        var h = el.offsetHeight;
+        var fw = 1400, fh = 1000;
+        var scale = Math.max(w / fw, h / fh);
+        var ox = (w - fw * scale) / 2;
+        var oy = (h - fh * scale) / 2;
+        frame.style.width = fw + 'px';
+        frame.style.height = fh + 'px';
+        frame.style.transform = 'translate(' + ox.toFixed(1) + 'px,' + oy.toFixed(1) + 'px) scale(' + scale.toFixed(4) + ')';
+        frame.style.transformOrigin = '0 0';
+      });
+    }
+    document.addEventListener('DOMContentLoaded', scaleIframes);
+    window.addEventListener('resize', scaleIframes);
+  </script>
+</body>
+</html>
